@@ -1,0 +1,15 @@
+<div>
+    <select name="item" [(ngModel)]="SelectedItem">
+        <option *ngFor="let item of CategoryList" [value]="item.ID" >
+          {{item.Name}}
+        </option>
+      </select>
+    <span>selected item :{{SelectedItem}}</span>
+</div>
+<div >TotalPrice:{{totalPriceFromProductDetails}}</div>
+
+
+<app-orderdetails [selectedItemfromMaster]="SelectedItem" 
+(TotalPriceChanged)="onTotalPriceChange($event)">
+
+</app-orderdetails>

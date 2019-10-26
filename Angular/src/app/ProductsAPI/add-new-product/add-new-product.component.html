@@ -1,0 +1,67 @@
+
+  <h1 class='text-center alert alert-success alert-sm'>Add New Product</h1>
+
+
+  <form class='col-md-5' #frm="ngForm" (ngSubmit)="InsertProduct()" >
+    <div class="form-group">
+      <input [(ngModel)]="newProduct._id" type="number" class="form-control" name="_id"
+        placeholder="Enter Product ID" required>
+    </div>
+
+    <div class="form-group">
+      <input  [(ngModel)]="newProduct.Name" type="text" class="form-control" name="Name"
+        placeholder="Enter Product Name" required>
+    </div>
+
+    <div class="form-group">
+      <input [(ngModel)]="newProduct.Price" type="number" class="form-control" name="Price"
+        placeholder="Enter Product Price" required>
+    </div>
+
+    <div class="form-group">
+      <input [(ngModel)]="newProduct.brand" type="text" class="form-control" name="brand"
+        placeholder="Enter Product Brand" required>
+    </div>
+
+    <div class="form-group">
+      <input [(ngModel)]="newProduct.Quantity" type="number" class="form-control" name="Quantity"
+        placeholder="Enter Product Quantity" min="1"  required>
+    </div>
+
+
+    <div class="form-group">
+      <input [(ngModel)]="newProduct.weight" type="number" class="form-control" name="weight"
+        placeholder="Enter Product Weight" min="1"  required>
+    </div>
+
+    <div class="form-group">
+      <input [(ngModel)]="newProduct.model" type="number" class="form-control" name="model"
+        placeholder="Enter Product Model" min="1"  required>
+    </div>
+
+    <div class="form-group">
+      <input [(ngModel)]="newProduct.color" type="text" class="form-control" name="color"
+        placeholder="Enter Product Color"  required>
+    </div>
+
+    <div class="form-group">
+      <input [(ngModel)]="newProduct.details" type="text" class="form-control" name="details"
+        placeholder="Enter Product Details"  required>
+    </div>
+
+    <div class="form-group">
+      <input [(ngModel)]="newProduct.date" type="datetime" class="form-control" name="date"
+        placeholder="Enter Product Date"  required>
+    </div>
+
+    <div class="form-group">
+      <input [(ngModel)]="newProduct.Image" type="file" class="form-control" name="Image"
+        placeholder="Enter Product Image"  required>
+    </div>
+
+    <button [disabled]="!frm.valid" type="submit" class="btn btn-primary btn-sm btn-block">Submit</button>
+    <button type="button" class="btn btn-danger btn-sm btn-block" (click)="goBack()">Back</button>
+  </form>
+
+
+
