@@ -13,7 +13,8 @@ app.use(cors({origin: "*"}));
 var productControllerClass = require("./controller");
 var productController = new productControllerClass();
 
-
+var distDir = __dirname + "/dist/";
+app.use(express.static(distDir));
 //app.use(()=>express.static('files'));
 app.use(express.static('Resources'));
 //console.log(__dirname);
@@ -55,12 +56,6 @@ var fileStorage =   multer.diskStorage({
 var upload = multer({ storage : fileStorage}).single('Image');
 
 
-app.get('/',function(req,res)
-{
-   
-    res.sendFile(__dirname+"/"+"IndexDB.html");
-});
-
 app.get("/getProducts",function(req,res){
    // console.log(req);
     productController.getAllProducts()
@@ -78,12 +73,6 @@ app.get("/getOneProduct/:id",function(req,res){
              res.send(JSON.stringify(data));
          });
  });
-
-app.get("/add",function(req,res){
-    res.sendFile(__dirname+"/"+"AddProduct.html");
-});
-
-
 
 app.post('/insert',upload,function(req,res){
    // console.log("Insert:" + JSON.stringify(req.body));
@@ -132,7 +121,7 @@ app.get('/edit/:_id',function(req,res){
                <title>example edit product</title>
            </head>
            <body>
-              <form action="http://localhost:5000/update" method="post" enctype="multipart/form-data">
+              <form action="http://localhost:9000/update" method="post" enctype="multipart/form-data">
                 <label> Product ID:</label>
                 <input type="number" value=${data1[0]._id} name="_id" required readonly><br>
                 <label>Name</label>
@@ -199,5 +188,5 @@ app.get('/delete/:_id',function(req,res){
                });     
         });
 });  
- 
-httpserver.listen(5000, function () {});
+PORT=process.env.PORT || 9000;
+httpserver.listen(PORT, function () {});
