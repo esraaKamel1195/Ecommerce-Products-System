@@ -8,7 +8,7 @@ export class Product {
         public brand?:string,
         public model?:number,
         public color?:string,
-        public wieght?:number,
+        public weight?:number,
         public date?:string,
         public details?:string)
     {

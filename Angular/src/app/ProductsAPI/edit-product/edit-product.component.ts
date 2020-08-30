@@ -3,6 +3,7 @@ import { Product } from '../../Shared Classes and types/Product';
 import { Router } from '@angular/router';
 import { APIService } from '../../Services/api.service';
 import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 import { async } from 'q';
 
 
@@ -17,7 +18,8 @@ export class EditProductComponent implements OnInit {
   selectedPrdID:number;
   constructor(private APIService: APIService
     , private router: Router,
-      private ActivatedRoute:ActivatedRoute) { 
+      private Location: Location,
+      private ActivatedRoute:ActivatedRoute) {
       this.selectedPrd=new Product();
       //this.EditedPrd=new Product();
     }
@@ -29,19 +31,22 @@ export class EditProductComponent implements OnInit {
         console.log(res);
          this.selectedPrd=res[0];
       },
-      (err)=>{ 
+      (err)=>{
          console.log(err);
       });
   }
   UpdateProduct(){
     console.log(this.selectedPrd);
-  
+
     this.APIService.UpdateProduct(this.selectedPrd[0])
      .subscribe(
        (data) => {console.log (data);
         this.router.navigate(['/ProductsFromAPI']);
        },
        (err) => {console.log(err);
-       });  
+       });
   }
+  goBack(){
+    this.Location.back();
+}
 }
