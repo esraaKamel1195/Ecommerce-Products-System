@@ -1,9 +1,13 @@
 {
-  "name": "cc",
+  "name": "crud-with-angular8",
   "version": "0.0.0",
+  "engines": {
+    "node": "12.x",
+    "npm": "6.x"
+  },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
