@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, OnChanges, SimpleChanges, EventEmitter, Output } from '@angular/core';
-import { Product } from 'src/app/Shared Classes and types/Product';
+import { Product } from 'src/app/SharedClassesandTypes/Product';
 import { Event } from '@angular/router';
 import { Router } from '@angular/router';
 

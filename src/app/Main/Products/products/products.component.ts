@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DiscountOffers } from 'src/app/Shared Classes and types/discount-offers.enum';
-import { ICategory } from 'src/app/Shared Classes and types/icategory';
-import { Iproduct } from 'src/app/Shared Classes and types/iproduct';
+import { DiscountOffers } from 'src/app/SharedClassesandTypes/discount-offers.enum';
+import { ICategory } from 'src/app/SharedClassesandTypes/icategory';
+import { Iproduct } from 'src/app/SharedClassesandTypes/iproduct';
 
 
 @Component({

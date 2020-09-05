@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { APIService } from 'src/app/Services/api.service';
-import { Product } from 'src/app/Shared Classes and types/Product';
+import { Product } from 'src/app/SharedClassesandTypes/Product';
 
 @Component({
   selector: 'app-api',

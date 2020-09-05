@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../../Shared Classes and types/Product';
+import { Product } from '../../SharedClassesandTypes/Product';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { APIService } from '../../Services/api.service';

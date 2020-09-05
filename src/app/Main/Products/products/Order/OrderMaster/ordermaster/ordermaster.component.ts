@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ICategory } from 'src/app/Shared Classes and types/icategory';
+import { ICategory } from 'src/app/SharedClassesandTypes/icategory';
 
 @Component({
   selector: 'app-ordermaster',
