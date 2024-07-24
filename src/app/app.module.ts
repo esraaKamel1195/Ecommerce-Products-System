@@ -23,10 +23,11 @@ import { ProductsFromAPIComponent } from './ProductsAPI/products-from-api/produc
 import { ViewDetailsComponent } from './ProductsAPI/view-details/view-details.component';
 import { AddNewProductComponent } from './ProductsAPI/add-new-product/add-new-product.component';
 import { EditProductComponent } from './ProductsAPI/edit-product/edit-product.component';
+
 @NgModule({
   declarations: [
     AppComponent,
- 
+
     HeaderComponent,
     FooterComponent,
     MainComponent,

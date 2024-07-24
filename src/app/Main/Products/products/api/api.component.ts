@@ -8,7 +8,7 @@ import { Product } from 'src/app/SharedClassesandTypes/Product';
   styleUrls: ['./api.component.css']
 })
 export class APIComponent implements OnInit {
-stdList : Product[]=[];
+  stdList : Product[]=[];
   constructor(private APIServise:APIService) { }
 
   ngOnInit() {
