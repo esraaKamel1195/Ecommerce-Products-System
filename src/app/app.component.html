@@ -1,11 +1,53 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<!-- <div class="container-fluid">
-  <app-header></app-header>
-  <app-products></app-products>
-  <app-shopping></app-shopping>
-  <app-footer></app-footer>
-</div> -->
+<!-- * * * * * * * to get started with your project! * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<app-header></app-header>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<main class="main">
+    <app-header></app-header>
+    <!-- table content-->
+    <table class="table table-primary table-striped-columns mt-4">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Job</th>
+          <th scope="col">Address</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>mdo</td>
+          <td>+20111111</td>
+          <td>{{email}}</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>fat</td>
+          <td>+20111111</td>
+          <td>{{email}}</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td colspan="1">Larry the Bird</td>
+          <td>twitter</td>
+          <td>fat</td>
+          <td>+20111111</td>
+          <td>{{email}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <app-footer></app-footer>
+</main>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<router-outlet />
