@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,7 +16,7 @@ import { OrdermasterComponent } from './Main/Products/products/Order/OrderMaster
 import { WrongPageComponent } from './WrongPageComponent/wrong-page/wrong-page.component';
 import { ContentComponent } from './Content/content/content.component';
 import { APIComponent } from './Main/Products/products/api/api.component';
-import {HttpClientModule} from '@angular/common/http';
+import { provideHttpClient } from '@angular/common/http';
 import { ContactUSComponent } from './Main/Products/products/contact-us/contact-us.component';
 import { AboutUSComponent } from './Main/Products/products/about-us/about-us.component';
 import { ProductsFromAPIComponent } from './ProductsAPI/products-from-api/products-from-api.component';
@@ -27,7 +27,6 @@ import { EditProductComponent } from './ProductsAPI/edit-product/edit-product.co
 @NgModule({
   declarations: [
     AppComponent,
-
     HeaderComponent,
     FooterComponent,
     MainComponent,
@@ -51,9 +50,7 @@ import { EditProductComponent } from './ProductsAPI/edit-product/edit-product.co
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
   ],
-
   bootstrap: [AppComponent]
 })
 export class AppModule { }
