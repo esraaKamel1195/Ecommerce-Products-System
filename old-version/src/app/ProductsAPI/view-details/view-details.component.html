@@ -1,17 +1,17 @@
-<div class="card" style="width: 18rem;">
+<div class="card" style="width: 18rem">
   <!-- <img class="card-img-top" [src]="${environment.API_URL}/Images/{{selectedProduct.Image}}" alt="Card image cap"> -->
   <div class="card-body">
-    <h5 class="card-title">Product Name: {{selectedProduct.Name}}</h5>
+    <h5 class="card-title">Product Name: {{ selectedProduct.Name }}</h5>
     <div class="card-text">
-      <div>Product ID: {{selectedProduct._id}}</div>
-      <div>Product price: {{selectedProduct.Price}}</div>
-      <div>Available Quantity: {{selectedProduct.Quantity}}</div>
-      <div>Available Brand: {{selectedProduct.brand}}</div>
-      <div>Available Color: {{selectedProduct.color}}</div>
-      <div>Available Model: {{selectedProduct.model}}</div>
-      <div>Available Details: {{selectedProduct.details}}</div>
-      <div>Available wieght: {{selectedProduct.weight}}</div>
+      <div>Product ID: {{ selectedProduct._id }}</div>
+      <div>Product price: {{ selectedProduct.Price }}</div>
+      <div>Available Quantity: {{ selectedProduct.Quantity }}</div>
+      <div>Available Brand: {{ selectedProduct.brand }}</div>
+      <div>Available Color: {{ selectedProduct.color }}</div>
+      <div>Available Model: {{ selectedProduct.model }}</div>
+      <div>Available Details: {{ selectedProduct.details }}</div>
+      <div>Available wieght: {{ selectedProduct.weight }}</div>
     </div>
-    <button  class="btn btn-primary" (click)="goBack()">Back</button>
+    <button class="btn btn-primary" (click)="goBack()">Back</button>
   </div>
 </div>

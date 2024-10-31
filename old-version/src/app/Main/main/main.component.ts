@@ -1,25 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import {Location} from '@angular/common'
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.css']
+  styleUrls: ['./main.component.css'],
 })
 export class MainComponent implements OnInit {
- 
+  constructor(private location: Location) {}
 
-  constructor( private location:Location) { }
-
-  ngOnInit() {
-  }
-  OnclickBuy()
-  {
+  ngOnInit() {}
+  OnclickBuy() {
     this.location.back();
- 
   }
-  onclickFarward()
-  {
+  onclickFarward() {
     this.location.forward();
   }
-
 }

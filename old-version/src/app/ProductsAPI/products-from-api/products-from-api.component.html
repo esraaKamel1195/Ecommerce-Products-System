@@ -1,10 +1,10 @@
-<br>
+<br />
 <div>
-      <a  routerLink="/AddNewProduct" class="btn btn-primary"> Add New Product</a>
+  <a routerLink="/AddNewProduct" class="btn btn-primary"> Add New Product</a>
 </div>
-<br>
-<div> Total price:{{TotalPrice}} </div>
-<br>
+<br />
+<div>Total price:{{ TotalPrice }}</div>
+<br />
 <table class="table">
   <thead class="thead-light">
     <tr>
@@ -13,7 +13,7 @@
       <th scope="col">Price</th>
       <th scope="col">Availbale Qunatity</th>
       <th scope="col">Wanted Quantity</th>
-      <th scope="col">To cart</th> 
+      <th scope="col">To cart</th>
       <th scope="col">Details</th>
       <th scope="col">Edit</th>
       <th scope="col">Delete</th>
@@ -21,15 +21,39 @@
   </thead>
   <tbody>
     <tr *ngFor="let prd of productList">
-      <td>{{prd._id}}</td>
-      <td>{{prd.Name}}</td>
-      <td>{{prd.Price}}</td>
-      <td>{{prd.Quantity}}</td>
-      <td><input #itemQuantity type="number" value="1" min="1" max={{prd.Quantity}}></td>
-      <td><button class="btn btn-primary" (click)="Buy(prd,itemQuantity.value)">Buy</button></td>
-      <td><button class="btn btn-primary" (click)="ViewDetails(prd._id)">View</button></td>
-      <td><button class="btn btn-primary" (click)="EditProduct(prd._id)">Edit</button></td>
-      <td><button class="btn btn-primary" (click)="DeleteProduct(prd._id)">Delete</button></td>
+      <td>{{ prd._id }}</td>
+      <td>{{ prd.Name }}</td>
+      <td>{{ prd.Price }}</td>
+      <td>{{ prd.Quantity }}</td>
+      <td>
+        <input
+          #itemQuantity
+          type="number"
+          value="1"
+          min="1"
+          max="{{ prd.Quantity }}"
+        />
+      </td>
+      <td>
+        <button class="btn btn-primary" (click)="Buy(prd, itemQuantity.value)">
+          Buy
+        </button>
+      </td>
+      <td>
+        <button class="btn btn-primary" (click)="ViewDetails(prd._id)">
+          View
+        </button>
+      </td>
+      <td>
+        <button class="btn btn-primary" (click)="EditProduct(prd._id)">
+          Edit
+        </button>
+      </td>
+      <td>
+        <button class="btn btn-primary" (click)="DeleteProduct(prd._id)">
+          Delete
+        </button>
+      </td>
     </tr>
   </tbody>
 </table>

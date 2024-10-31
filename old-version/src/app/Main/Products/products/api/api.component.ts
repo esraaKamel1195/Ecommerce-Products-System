@@ -5,14 +5,21 @@ import { Product } from 'src/app/SharedClassesandTypes/Product';
 @Component({
   selector: 'app-api',
   templateUrl: './api.component.html',
-  styleUrls: ['./api.component.css']
+  styleUrls: ['./api.component.css'],
 })
 export class APIComponent implements OnInit {
-  stdList : Product[]=[];
-  constructor(private APIServise:APIService) { }
+  stdList: Product[] = [];
+  constructor(private APIServise: APIService) {}
 
   ngOnInit() {
-   this.APIServise.getAllProducts().subscribe((data)=> {this.stdList=data;console.log(data)},(err)=>{console.log(err);});
+    this.APIServise.getAllProducts().subscribe(
+      (data) => {
+        this.stdList = data;
+        console.log(data);
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
   }
-
 }

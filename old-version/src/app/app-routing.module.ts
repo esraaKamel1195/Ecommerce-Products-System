@@ -14,22 +14,22 @@ import { AddNewProductComponent } from './ProductsAPI/add-new-product/add-new-pr
 import { EditProductComponent } from './ProductsAPI/edit-product/edit-product.component';
 
 const routes: Routes = [
-  {path:'home',component:ProductsComponent},
- // {path:'Products',component:APIComponent},
-  {path:'',redirectTo:'/home',pathMatch:'full'},
-  {path:'Products/:id',component:OrderdetailsComponent},
-  {path:'Products',component:OrdermasterComponent},
-  {path:'Contact',component:ContactUSComponent},
-  {path:'About',component:AboutUSComponent},
-  {path:'ProductsFromAPI',component:ProductsFromAPIComponent},
-  {path:'ViewProductDetails/:id',component:ViewDetailsComponent},
-  {path:'AddNewProduct',component:AddNewProductComponent},
-  {path:'EditProduct/:id',component:EditProductComponent},
-  {path:'**',component:WrongPageComponent}
+  { path: 'home', component: ProductsComponent },
+  // {path:'Products',component:APIComponent},
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'Products/:id', component: OrderdetailsComponent },
+  { path: 'Products', component: OrdermasterComponent },
+  { path: 'Contact', component: ContactUSComponent },
+  { path: 'About', component: AboutUSComponent },
+  { path: 'ProductsFromAPI', component: ProductsFromAPIComponent },
+  { path: 'ViewProductDetails/:id', component: ViewDetailsComponent },
+  { path: 'AddNewProduct', component: AddNewProductComponent },
+  { path: 'EditProduct/:id', component: EditProductComponent },
+  { path: '**', component: WrongPageComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

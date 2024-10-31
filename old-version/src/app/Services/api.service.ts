@@ -1,11 +1,11 @@
-import { Injectable } from "@angular/core";
-import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { Observable, Observer } from "rxjs";
-import { Product } from "../SharedClassesandTypes/Product";
-import { environment } from "src/environments/environment";
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable, Observer } from 'rxjs';
+import { Product } from '../SharedClassesandTypes/Product';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
 export class APIService {
   constructor(private httpClient: HttpClient) {}
@@ -17,8 +17,8 @@ export class APIService {
   getProductByID(selectedPrdID: number): Observable<Product> {
     const httpOptions = {
       headers: new HttpHeaders({
-        "Content-Type": "application/json",
-        Accept: " */*",
+        'Content-Type': 'application/json',
+        Accept: ' */*',
       }),
     };
     return this.httpClient.get<Product>(
@@ -29,8 +29,8 @@ export class APIService {
   UpdateProduct(product: Product): Observable<any> {
     const httpOptions = {
       headers: new HttpHeaders({
-        "Content-Type": "application/json",
-        Accept: " */*",
+        'Content-Type': 'application/json',
+        Accept: ' */*',
       }),
     };
     // console.log(product.toString());
@@ -44,8 +44,8 @@ export class APIService {
   InsertProduct(Product: Product): Observable<any> {
     const httpOptions = {
       headers: new HttpHeaders({
-        "Content-Type": "application/json",
-        Accept: " */*",
+        'Content-Type': 'application/json',
+        Accept: ' */*',
       }),
     };
     return this.httpClient.post<any>(

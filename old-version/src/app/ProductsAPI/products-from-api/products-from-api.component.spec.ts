@@ -8,9 +8,8 @@ describe('ProductsFromAPIComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProductsFromAPIComponent ]
-    })
-    .compileComponents();
+      declarations: [ProductsFromAPIComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
