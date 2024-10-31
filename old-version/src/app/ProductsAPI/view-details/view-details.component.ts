@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../../SharedClassesandTypes/Product';
-import { APIService } from '../../Services/api.service';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { Product } from '../../SharedClassesandTypes/Product';
+import { APIService } from '../../Services/api.service';
 
 @Component({
   selector: 'app-view-details',
@@ -11,6 +11,7 @@ import { Location } from '@angular/common';
 })
 export class ViewDetailsComponent implements OnInit {
   selectedProduct: Product = new Product();
+
   constructor(
     private APIService: APIService,
     private activatedRoute: ActivatedRoute,

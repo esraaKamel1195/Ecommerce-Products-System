@@ -11,7 +11,8 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../../old-version/src/environments/environment';
 import { WrongPageComponentComponent } from './wrong-page-component/wrong-page-component.component';
-import { AuthComponent } from './Authentication/auth/auth.component';
+import { AuthModule } from './Authentication/auth.module';
+import { ProductsModule } from './products/products.module';
 
 @NgModule({
   declarations: [
@@ -19,12 +20,13 @@ import { AuthComponent } from './Authentication/auth/auth.component';
     HeaderComponent,
     FooterComponent,
     WrongPageComponentComponent,
-    AuthComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    AuthModule,
+    ProductsModule,
     StoreModule.forRoot({}, {}),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
