@@ -15,6 +15,11 @@ import { OneProductInListComponent } from './one-product-in-list/one-product-in-
   imports: [
     CommonModule,
   ],
-  exports: []
+  exports: [
+    ProductListComponent,
+    ProductDetailsComponent,
+    AddAndEditProductComponent,
+    OneProductInListComponent,
+  ]
 })
 export class ProductsModule { }

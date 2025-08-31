@@ -10,20 +10,22 @@ import { ForgetPasswordComponent } from './forget-password/forget-password.compo
 import { ChangedPasswordComponent } from './changed-password/changed-password.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 @NgModule({
-  declarations:[
+  declarations: [
     AuthComponent,
     LoginComponent,
     RegisterComponent,
     ForgetPasswordComponent,
     ChangedPasswordComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
   ],
-  imports:[
-    CommonModule,
-    BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
+  imports: [CommonModule, BrowserModule, FormsModule, ReactiveFormsModule],
+  exports: [
+    AuthComponent,
+    LoginComponent,
+    RegisterComponent,
+    ForgetPasswordComponent,
+    ChangedPasswordComponent,
+    ResetPasswordComponent,
   ],
-  exports: []
 })
 export class AuthModule {}
